@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+
+  --color-background: var(--color-light);
+  --color-background-inverted: var(--color-dark);
+
+  --color-outline: var(--outline);
+  --color-outline-inverted: var(--outline-inverted);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-foreground-inverted: var(--foreground);
+
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-secondary-inverted: var(--foreground-secondary);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1.5rem;
+  --text-lg: 2rem;
+  --text-xl: 3rem;
+  --text-2xl: 4rem;
+
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 80px;
+
+  --breakpoint-xs: 400px;
+
+  --font-sans: "Helvetica";
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --dark: hsl(0 0% 0%);
+  --light: hsl(0 0% 98%);
+
+  --outline: hsl(0 0% 75%);
+  --outline-inverted: hsl(0 0% 25%);
+
+  --foreground: hsl(0 0% 5%);
+  --foreground-inverted: hsl(0 0% 97%);
+
+  --foreground-secondary: hsl(0 0% 40%);
+  --foreground-secondary-inverted: hsl(0 0% 60%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: var(--font-sans), sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
 }

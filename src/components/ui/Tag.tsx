@@ -5,15 +5,15 @@ interface Props {
   className?: string;
 }
 
-export default function Brief({ children, className }: Props) {
+export default function Tag({ children, className }: Props) {
   return (
-    <p
+    <li
       className={cn(
-        "text-xl text-current font-sans leading-[1.15em]",
+        "text-xs uppercase font-mono text-current leading-none",
         className,
       )}
     >
       {children}
-    </p>
+    </li>
   );
 }

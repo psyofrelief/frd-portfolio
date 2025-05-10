@@ -9,8 +9,8 @@ export default function SiteLayout({
 }) {
   return (
     <>
-      <Navbar />
-      <main>{children}</main>
+      <Navbar className="px-xs sticky top-0" />
+      {children}
     </>
   );
 }

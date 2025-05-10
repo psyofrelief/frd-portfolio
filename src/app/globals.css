@@ -11,10 +11,10 @@
   --color-outline-inverted: var(--outline-inverted);
 
   --color-foreground: var(--foreground);
-  --color-foreground-inverted: var(--foreground);
+  --color-foreground-inverted: var(--foreground-inverted);
 
   --color-foreground-secondary: var(--foreground-secondary);
-  --color-foreground-secondary-inverted: var(--foreground-secondary);
+  --color-foreground-secondary-inverted: var(--foreground-secondary-inverted);
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

@@ -1,8 +1,17 @@
+import { cn } from "@/lib/utils";
 import NavLink from "./NavLink";
 
-export default function Navbar() {
+interface Props {
+  className?: string;
+}
+export default function Navbar({ className }: Props) {
   return (
-    <nav className="w-full flex px-md py-xs text-xs justify-between">
+    <nav
+      className={cn(
+        "z-[99] mix-blend-difference flex py-xs text-xs justify-between text-foreground-inverted",
+        className,
+      )}
+    >
       <p className="uppercase font-mono">Faried Idris — 12:48PM</p>
       <p className="text-xs font-bold">
         Full stack web developer based in Australia

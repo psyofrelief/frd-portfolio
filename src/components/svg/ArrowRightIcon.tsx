@@ -1,10 +1,16 @@
-export default function ArrowRightIcon() {
+import { cn } from "@/lib/utils";
+
+interface Props {
+  className?: string;
+}
+
+export default function ArrowRightIcon({ className }: Props) {
   return (
     <svg
       width="57"
       height="49"
       viewBox="0 0 57 49"
-      className=" h-[12px] stroke-[4px] w-fit stroke-current"
+      className={cn("h-[12px] stroke-[4px] w-fit stroke-current", className)}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

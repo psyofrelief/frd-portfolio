@@ -86,3 +86,7 @@ button {
     }
   }
 }
+
+.project_intro_grid {
+  grid-template-rows: auto 1fr;
+}

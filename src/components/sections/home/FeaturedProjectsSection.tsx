@@ -14,11 +14,8 @@ export default function FeaturedProjectsSection() {
         {/* Top-right project */}
         <ProjectItem {...featuredProjects[1]} />
 
-        {/* Bottom row: project + "More Projects" button */}
-
         <div className="col-span-2 flex flex-1  mx-auto gap-x-[100px] justify-between max-h-fit items-end w-full max-w-[820px]">
           <ProjectItem {...featuredProjects[2]} className="w-full" />
-          {/* Bottom-right “More Projects” */}
           <div className="flex justify-end w-fit">
             <Link href={"/works"} className="flex">
               <Button>All Works</Button>

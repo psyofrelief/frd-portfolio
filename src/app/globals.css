@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* Global base theme */
 @theme {
@@ -81,7 +81,7 @@
 
 /* Dark mode overrides */
 @layer theme {
-  .dark {
+  [data-theme="dark"] {
     --dark: hsl(0 0% 90%);
     --light: hsl(0 0% 2%);
     --background: hsl(0 0 0%);
@@ -105,4 +105,10 @@ button {
 
 .project_intro_grid {
   grid-template-rows: auto 1fr;
+}
+
+html.enable-transition body {
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }

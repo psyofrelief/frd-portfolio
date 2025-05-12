@@ -1,13 +1,46 @@
+"use client";
+
 import ArrowRightIcon from "@/components/svg/ArrowRightIcon";
 import Brief from "@/components/ui/Brief";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function SummarySection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isAbove = entry.boundingClientRect.top > 0;
+
+        if (!entry.isIntersecting && isAbove) {
+          document.documentElement.removeAttribute("data-theme");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "-30% 0px 0px 0px",
+      },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="px-xs py-sm grid grid-cols-2 grid-rows-1 flex-col gap-y-xl gap-x-md pb-[400px]">
+    <section
+      ref={sectionRef}
+      className="px-xs py-sm grid grid-cols-2 grid-rows-1 flex-col gap-y-xl gap-x-md pb-[400px]"
+    >
       <div className="flex flex-col gap-y-xl">
         <header className="flex flex-col gap-y-xs">
           <Heading>What I Do</Heading>

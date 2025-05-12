@@ -1,3 +1,4 @@
+import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,15 +21,8 @@ export default function ProjectItem({
   img,
 }: Props) {
   return (
-    <li className={cn("flex flex-col ", className)}>
-      {/*<div className={`w-full aspect-[${aspect}] bg-black/10`} />*/}
-      <Image
-        className=""
-        height={1000}
-        width={1000}
-        src={`/images/${img}`}
-        alt={`${name}'s display demo image`}
-      />
+    <li className={cn("flex flex-col w-full", className)}>
+      <LiquidImageHover src={`/images/${img}`} autoRatio />
 
       <div className="flex justify-between items-baseline">
         <p className="mt-2 text-xs uppercase font-mono">

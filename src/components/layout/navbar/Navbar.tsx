@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import NavLink from "./NavLink";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -12,7 +13,9 @@ export default function Navbar({ className }: Props) {
         className,
       )}
     >
-      <p className="uppercase font-mono">Faried Idris — 12:48PM</p>
+      <Link href={"/"} className="uppercase font-mono">
+        Faried Idris — 12:48PM
+      </Link>
       <p className="text-xs font-bold">
         Full stack web developer based in Australia
       </p>

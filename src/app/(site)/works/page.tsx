@@ -18,17 +18,15 @@ export default function WorksPage() {
         <ProjectItem {...featuredProjects[1]} />
 
         {/* Bottom row: project + "More Projects" button */}
-        <div className="col-span-2 flex w-fit max-w-[1000px] mx-auto gap-x-[200px] justify-between max-h-fit items-end">
-          <ProjectItem
-            {...featuredProjects[2]}
-            className="w-fit max-w-[600px]"
-          />
-        </div>
+        <ProjectItem
+          {...featuredProjects[2]}
+          className="w-full max-w-[700px] col-span-2 mx-auto"
+        />
       </div>
-      <div className="flex justify-between   w-full col-span-2">
-        <ProjectItem {...featuredProjects[1]} className="max-w-[400px]" />
+      <div className="flex justify-between  w-full col-span-2">
+        <ProjectItem {...featuredProjects[1]} className="max-w-[600px]" />
 
-        <ProjectItem {...featuredProjects[0]} className="w-fit" />
+        <ProjectItem {...featuredProjects[0]} className="max-w-[420px]" />
       </div>
     </section>
   );

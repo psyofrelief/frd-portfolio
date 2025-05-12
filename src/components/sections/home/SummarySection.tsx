@@ -1,17 +1,22 @@
 import ArrowRightIcon from "@/components/svg/ArrowRightIcon";
 import Brief from "@/components/ui/Brief";
 import Heading from "@/components/ui/Heading";
+import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Link from "next/link";
 
 export default function SummarySection() {
   return (
-    <section className="px-xs py-sm flex flex-col min-h-screen-minus-nav">
-      <header className="flex flex-col gap-y-xs">
-        <Heading>What I Do</Heading>
-        <Brief>Design, branding, prototyping and build</Brief>
-      </header>
+    <section className="px-xs py-sm grid grid-cols-2 grid-rows-1 flex-col gap-y-xl gap-x-md pb-[400px]">
+      <div className="flex flex-col gap-y-xl">
+        <header className="flex flex-col gap-y-xs">
+          <Heading>What I Do</Heading>
+          <Brief>Design, branding, prototyping and build</Brief>
+        </header>
 
-      <div className="flex flex-col gap-y-md max-w-fit mx-auto my-auto">
+        <LiquidImageHover src="/images/3.png" className="max-w-full" />
+      </div>
+
+      <div className="flex flex-col gap-y-md max-w-fit mx-auto mt-auto">
         <p className="uppercase font-mono max-w-[650px]">
           Enthusiastic about graphic design, typography, and the dynamic areas
           of motion and web-based animations. Specialised in translating brands

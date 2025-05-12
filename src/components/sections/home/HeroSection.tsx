@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/layout/navbar/Navbar";
-import LogoHorizontal from "@/components/shared/logo/LogoHorizontal";
 import ScrollToSectionButton from "@/components/ui/ScrollToSectionButton";
 import HeroLink from "@/components/ui/HeroLink";
 import { cn } from "@/lib/utils";
+import LiquidImageHover from "@/components/ui/LiquidImageHover";
+import Link from "next/link";
 
 export default function HeroSection() {
   const refSentinel = useRef<HTMLDivElement>(null);
@@ -22,7 +23,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-full flex flex-col p-xs">
-      <LogoHorizontal className="mb-md" />
+      <Link href={"/"} className="flex">
+        <LiquidImageHover />
+      </Link>
 
       {/* Sentinel to detect when nav should stick */}
       <div ref={refSentinel} className="w-full h-px" />

@@ -1,6 +1,7 @@
-import LogoHorizontal from "@/components/shared/logo/LogoHorizontal";
 import { footerData } from "@/data/footer";
 import FooterLink from "./FooterLink";
+import LiquidImageHover from "@/components/ui/LiquidImageHover";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -31,7 +32,10 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <LogoHorizontal />
+
+      <Link href={"/"} className="flex">
+        <LiquidImageHover />
+      </Link>
     </footer>
   );
 }

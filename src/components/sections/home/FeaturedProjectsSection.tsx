@@ -13,15 +13,12 @@ export default function FeaturedProjectsSection() {
         <ProjectItem {...featuredProjects[1]} />
 
         {/* Bottom row: project + "More Projects" button */}
-        <div className="col-span-2 flex w-fit max-w-[1000px] mx-auto gap-x-[200px] justify-between max-h-fit items-end">
-          <ProjectItem
-            {...featuredProjects[2]}
-            className="w-fit max-w-[600px]"
-          />
 
+        <div className="col-span-2 flex lfex-1  mx-auto gap-x-[100px] justify-between max-h-fit items-end w-full max-w-[820px]">
+          <ProjectItem {...featuredProjects[2]} className="w-full" />
           {/* Bottom-right “More Projects” */}
           <div className="flex justify-end w-fit">
-            <button className="uppercase font-mono text-xs bg-dark text-foreground-inverted px-xs py-1">
+            <button className="uppercase whitespace-nowrap font-mono text-xs bg-dark text-foreground-inverted px-xs py-1">
               All Works
             </button>
           </div>

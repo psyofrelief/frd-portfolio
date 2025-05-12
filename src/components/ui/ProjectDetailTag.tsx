@@ -14,7 +14,7 @@ export default function ProjectDetailTag({
   anchor = false,
 }: Props) {
   return (
-    <div className="sm:flex grid grid-cols-3 gap-x-sm items-center">
+    <div className="project_detail_tag grid gap-x-sm items-center">
       <Heading>{label}:</Heading>
       <Tag className="flex whitespace-nowrap">
         {!anchor ? (

@@ -6,11 +6,13 @@ import Image from "next/image";
 
 export default function SingleWorkPage() {
   return (
-    <section className="px-xs pb-xl pt-3xl flex flex-col min-h-screen-minus-nav gap-y-xl">
-      <div className="project_intro_grid grid grid-cols-8">
-        <h1 className="text-2xl row-start-1 col-start-3">001_PathSnap</h1>
-        <div className="flex flex-col gap-y-sm row-start-2">
-          <ul className="flex flex-col gap-y-1 uppercase text-xs font-mono">
+    <section className="px-xs pb-xl pt-lg sm:pt-3xl flex flex-col min-h-screen-minus-nav-mobile sm:min-h-screen-minus-nav gap-y-xl">
+      <div className="project_intro_grid grid lg:gap-y-0 gap-y-sm grid-cols-1 lg:grid-cols-8">
+        <h1 className="text-lg xs:text-xl md:text-2xl lg:row-start-1 lg:col-start-3">
+          001_PathSnap
+        </h1>
+        <div className="flex lg:justify-start flex-col sm:flex-row justify-between sm:items-end  lg:flex-col gap-y-md lg:row-start-2">
+          <ul className="flex flex-col sm:size-fit gap-y-1 uppercase">
             <ProjectDetailTag label="Type" desc="Link Shortener" />
             <ProjectDetailTag label="Year" desc="2025" />
             <ProjectDetailTag label="Website" desc="www.p-s.co" anchor />
@@ -20,9 +22,9 @@ export default function SingleWorkPage() {
               anchor
             />
           </ul>
-          <div className="flex flex-col gap-y-sm">
+          <div className="sm:flex flex-col grid grid-cols-3  gap-x-sm gap-y-xs ">
             <Heading>Tech Stack</Heading>
-            <ul className="flex flex-col gap-y-1 uppercase text-xs font-mono">
+            <ul className="grid gap-x-sm sm:flex flex-col gap-y-1 uppercase text-xs font-mono">
               <Tag>Javascript</Tag>
               <Tag>Javascript</Tag>
               <Tag>Javascript</Tag>
@@ -31,7 +33,7 @@ export default function SingleWorkPage() {
           </div>
         </div>
 
-        <div className="col-span-7 col-start-3 row-start-2 flex flex-col gap-y-sm">
+        <div className="lg:col-span-7 lg:col-start-3 lg:row-start-2 flex flex-col gap-y-sm">
           <Image
             className="w-full"
             height={1440}
@@ -40,7 +42,7 @@ export default function SingleWorkPage() {
             alt={`display demo image `}
           />
 
-          <div className="grid grid-cols-2 gap-x-lg text-xs">
+          <div className="grid sm:grid-cols-2 gap-x-lg gap-y-sm  text-xs">
             <p>
               With the launch of the new Bearbrick audio, Medicom needed a
               platform that would not only talk to the unique features and

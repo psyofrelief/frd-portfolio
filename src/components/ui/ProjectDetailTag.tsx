@@ -14,9 +14,9 @@ export default function ProjectDetailTag({
   anchor = false,
 }: Props) {
   return (
-    <div className="flex gap-x-sm items-center">
+    <div className="sm:flex grid grid-cols-3 gap-x-sm items-center">
       <Heading>{label}:</Heading>
-      <Tag className="flex">
+      <Tag className="flex whitespace-nowrap">
         {!anchor ? (
           desc
         ) : (
@@ -25,7 +25,7 @@ export default function ProjectDetailTag({
             rel="noreferrer"
             target="_blank"
             aria-label={`Visit ${label}`}
-            className="flex-1 underline"
+            className="flex-1 underline whitespace-nowrap"
           >
             {desc}
           </a>

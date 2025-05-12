@@ -4,7 +4,7 @@ import Heading from "@/components/ui/Heading";
 
 export default function WorksPage() {
   return (
-    <section className="min-h-screen px-xs sm:pt-3xl pt-lg pb-3xl sm:pb-[250px] flex flex-col gap-y-lg">
+    <section className="min-h-screen px-xs sm:pt-3xl pt-lg pb-3xl sm:pb-[250px] flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
         <Heading>All Works (06)</Heading>
         <Brief>
@@ -28,7 +28,7 @@ export default function WorksPage() {
         <ProjectItem {...featuredProjects[0]} className="sm:hidden" />
       </div>
       <div className="sm:flex md:flex-row flex-col gap-y-[200px] lg:mt-0 mt-[300px] hidden justify-between  w-full col-span-2 gap-lg">
-        <ProjectItem {...featuredProjects[1]} className="max-w-fit " />
+        <ProjectItem {...featuredProjects[1]} />
 
         <ProjectItem {...featuredProjects[0]} className="max-w-[420px]" />
       </div>
@@ -52,8 +52,8 @@ const featuredProjects = [
     id: "beta",
     name: "Project Beta",
     shortDesc: "Craft + Culture",
-    aspect: "2/3",
-    className: "w-3/4 justify-self-end",
+    aspect: "3/4",
+    className: "max-w-[540px] justify-self-end",
     img: "2.png",
     imgMobile: "1.png",
   },

@@ -111,3 +111,7 @@ html.enable-transition body {
 .project_detail_tag {
   grid-template-columns: 80px 1fr;
 }
+
+li {
+  list-style: none;
+}

@@ -1,11 +1,13 @@
+import FlipText from "./FlipText";
+
 export default function ScrollToSectionButton() {
   return (
     <>
       <button
         type="button"
-        className="font-mono sm:block hidden whitespace-nowrap text-xs text-light"
+        className="font-mono  sm:flex hidden whitespace-nowrap text-xs text-light"
       >
-        [SCROLL TO SEE MORE]
+        [<FlipText>SCROLL TO SEE MORE</FlipText>]
       </button>
 
       <button

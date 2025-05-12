@@ -1,4 +1,5 @@
 "use client";
+import FadeUp from "@/components/ui/FadeUp";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -34,9 +35,24 @@ export default function ProjectItem({
 
   return (
     <>
-      <li className={cn("sm:flex hidden flex-col w-full relative", className)}>
-        <div className={cn(" inset-0  bg-black", `aspect-${aspect}`)}>
-          <LiquidImageHover src={`/images/${img}`} autoRatio aspect={aspect} />
+      <FadeUp
+        as={"li"}
+        className={cn(
+          "sm:flex hidden flex-col w-full relative overflow-clip",
+          className,
+        )}
+      >
+        <div
+          className={cn(" w-full relative bg-gray-300", `aspect-[${aspect}]`)}
+        >
+          <LiquidImageHover
+            src={`/images/${img}`}
+            autoRatio
+            aspect={aspect}
+            className="absolute inset-0"
+          />
+
+          <Image src={`/images/${img}`} width={1000} height={720} alt="s" />
         </div>
 
         <div className="flex justify-between items-baseline">
@@ -51,15 +67,18 @@ export default function ProjectItem({
             View
           </Link>
         </div>
-      </li>
-      <li className={cn("flex flex-col w-full relative sm:hidden")}>
+      </FadeUp>
+      <FadeUp
+        as={"li"}
+        className={cn("flex flex-col w-full relative sm:hidden")}
+      >
         <Image src={`/images/${imgMobile}`} width={1000} height={720} alt="s" />
 
         <div className="flex justify-between items-baseline">
           <p className="mt-2 text-xs uppercase font-mono">{`00${idx}_${name}`}</p>
           <p className="mt-2 text-xs uppercase font-mono">{shortDesc}</p>
         </div>
-      </li>
+      </FadeUp>
     </>
   );
 }

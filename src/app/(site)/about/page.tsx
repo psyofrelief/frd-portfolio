@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="px-xs md:pt-3xl pb-md pt-lg mb-3xl  min-h-screen-minus-nav  flex flex-col gap-y-xl">
+    <section className="px-xs md:pt-3xl pb-md pt-lg mb-3xl md:min-h-screen-minus-nav  flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
         <Heading>Info</Heading>
         <Brief>
@@ -17,10 +17,10 @@ export default function AboutPage() {
         </Brief>
       </header>
 
-      <div className="flex flex-1 md:flex-row flex-col-reverse gap-y-xl justify-between">
+      <div className="flex flex-1 md:flex-row flex-col-reverse gap-y-xl justify-between gap-x-md lg:gap-x-0">
         <div className="flex flex-col md:gap-y-0 gap-y-2xl justify-between flex-1">
-          <div className="flex justify-between md:max-w-1/2">
-            <div className="flex flex-col gap-y-sm">
+          <div className="flex sm:flex-row flex-col gap-y-2xl justify-between lg:max-w-1/2">
+            <div className="flex flex-col gap-sm">
               <Heading>Skills</Heading>
               <ul className="flex flex-col gap-y-xs">
                 {skills.map((e) => (
@@ -39,7 +39,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-sm">
+          <div className="flex flex-col gap-y-sm w-fit">
             <Heading>Colophon</Heading>
             <ul className="flex flex-col gap-y-xs">
               {colophon.map((e) => (
@@ -49,7 +49,7 @@ export default function AboutPage() {
           </div>
         </div>
         <Image
-          className="w-full md:w-fit md:max-w-[300px] max-w-full"
+          className=" w-full md:max-w-[370px]"
           height={1440}
           width={960}
           src={`/images/2.png`}

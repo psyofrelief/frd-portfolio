@@ -7,9 +7,9 @@ import Image from "next/image";
 export default function SingleWorkPage() {
   return (
     <section className="px-xs pb-xl pt-lg sm:pt-3xl flex flex-col min-h-screen-minus-nav-mobile sm:min-h-screen-minus-nav gap-y-xl">
-      <div className="flex lg:flex-row flex-col justify-between gap-md">
+      <div className="flex lg:flex-row flex-col justify-between gap-x-xl">
         <div className="flex flex-col ">
-          <h1 className="text-lg xs:text-xl md:text-2xl lg:row-start-1 lg:col-start-3">
+          <h1 className="text-lg mb-sm xs:text-xl md:text-2xl lg:row-start-1 lg:col-start-3">
             001_PathSnap
           </h1>
           <div className="lg:col-span-7 lg:col-start-3 lg:row-start-2 flex flex-col gap-y-sm">
@@ -43,7 +43,7 @@ export default function SingleWorkPage() {
             </div>
           </div>
         </div>
-        <div className="flex mt-[84px] lg:justify-start flex-col  sm:flex-row  min-w-fit  justify-between sm:items-start   lg:flex-col gap-y-md lg:row-start-2">
+        <div className="flex mt-[104px] lg:justify-start flex-col  sm:flex-row  min-w-fit  justify-between sm:items-start   lg:flex-col lg:gap-y-xl gap-y-md lg:row-start-2">
           <ul className="flex flex-col sm:size-fit gap-y-1 uppercase">
             <ProjectDetailTag label="Type" desc="Link Shortener" />
             <ProjectDetailTag label="Year" desc="2025" />

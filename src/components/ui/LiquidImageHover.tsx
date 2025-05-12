@@ -80,17 +80,15 @@ export default function LiquidImageHover({
       />
       <Script src="/hover-effect.umd.js" strategy="afterInteractive" />
 
-      <div className="flex overflow-hidden w-full">
-        <div
-          ref={wrapperRef}
-          key={pathname}
-          className={cn(
-            "relative size-full bg-black", // fallback aspect
-            `aspect-${aspect}`,
-            className,
-          )}
-        />
-      </div>
+      <div
+        ref={wrapperRef}
+        key={pathname}
+        className={cn(
+          "relative size-full overflow-clip bg-black", // fallback aspect
+          `aspect-${aspect}`,
+          className,
+        )}
+      />
     </>
   );
 }

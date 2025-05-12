@@ -13,7 +13,7 @@ export default function HeroLink({ label, href }: Props) {
         rel="noreferrer"
         target="_blank"
         aria-label={`View my ${label}`}
-        className="flex-1 flex gap-x-xs font-mono uppercase text-foreground-secondary text-xs items-center"
+        className="flex-1 flex gap-x-xs font-mono uppercase text-foreground-secondary-inverted  text-xs items-center"
       >
         {label}
         <span>

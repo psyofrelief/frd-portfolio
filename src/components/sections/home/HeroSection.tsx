@@ -22,9 +22,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex flex-col p-xs">
-      <Link href={"/"} className="flex">
+    <section className="relative h-screen w-full flex flex-col p-xs mix-blend-difference">
+      <Link href={"/"} className="flex mb-md relative">
         <LiquidImageHover />
+        <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
 
       {/* Sentinel to detect when nav should stick */}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-background text-foreground p-xs min-h-screen-minus-nav justify-between">
+    <footer className="flex flex-col bg-background-inverted mix-blend-difference text-foreground-inverted p-xs min-h-screen-minus-nav justify-between">
       <div className="flex justify-between gap-x-lg">
         <p className="uppercase font-mono text-xs max-w-[490px]">
           now that you got here, why not getting in touch? look around, there

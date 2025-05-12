@@ -1,5 +1,7 @@
 import ProjectItem from "@/components/shared/logo/ProjectItem";
+import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
+import Link from "next/link";
 
 export default function FeaturedProjectsSection() {
   return (
@@ -14,13 +16,13 @@ export default function FeaturedProjectsSection() {
 
         {/* Bottom row: project + "More Projects" button */}
 
-        <div className="col-span-2 flex lfex-1  mx-auto gap-x-[100px] justify-between max-h-fit items-end w-full max-w-[820px]">
+        <div className="col-span-2 flex flex-1  mx-auto gap-x-[100px] justify-between max-h-fit items-end w-full max-w-[820px]">
           <ProjectItem {...featuredProjects[2]} className="w-full" />
           {/* Bottom-right “More Projects” */}
           <div className="flex justify-end w-fit">
-            <button className="uppercase whitespace-nowrap font-mono text-xs bg-dark text-foreground-inverted px-xs py-1">
-              All Works
-            </button>
+            <Link href={"/works"} className="flex">
+              <Button>All Works</Button>
+            </Link>
           </div>
         </div>
       </div>

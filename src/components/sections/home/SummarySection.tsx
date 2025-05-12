@@ -1,5 +1,6 @@
 import ArrowRightIcon from "@/components/svg/ArrowRightIcon";
 import Brief from "@/components/ui/Brief";
+import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Link from "next/link";
@@ -26,18 +27,17 @@ export default function SummarySection() {
           <li className="flex">
             <Link
               href={"/about"}
-              className="flex-1 font-mono text-xs uppercase text-foreground-secondary"
+              className="font-mono text-xs uppercase text-foreground-secondary"
             >
               Learn more
             </Link>
           </li>
           <li className="flex size-fit">
-            <Link
-              href={"/about"}
-              className="flex-1 bg-background-inverted px-xs py-1 h-fit text-foreground-inverted flex items-center gap-x-xs font-mono text-xs uppercase"
-            >
-              Get in touch
-              <ArrowRightIcon />
+            <Link href={"/contact"} className="flex">
+              <Button>
+                Get in touch
+                <ArrowRightIcon />
+              </Button>
             </Link>
           </li>
         </ul>

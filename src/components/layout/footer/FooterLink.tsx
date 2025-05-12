@@ -8,7 +8,7 @@ interface Props {
 
 export default function FooterLink({ label, href, anchor = false }: Props) {
   return (
-    <li className="flex w-fit font-bold text-xs">
+    <li className="flex w-fit font-bold text-xs whitespace-nowrap">
       {anchor ? (
         <a
           rel="noreferrer"

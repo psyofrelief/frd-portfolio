@@ -9,7 +9,7 @@ export default function Brief({ children, className }: Props) {
   return (
     <p
       className={cn(
-        "text-xl text-current font-sans leading-[1.15em]",
+        "text-lg md:text-xl text-current font-sans leading-[1.15em]",
         className,
       )}
     >

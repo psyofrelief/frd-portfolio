@@ -3,19 +3,18 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* Global base theme */
-@theme {
-  --dark: hsl(0 0% 0%);
-  --light: hsl(0 0% 98%);
+@layer theme {
+  :root {
+    --dark: hsl(0 0% 0%);
+    --light: hsl(0 0% 98%);
 
-  --background: hsl(0 0 98%);
-  --outline: hsl(0 0% 75%);
-  --outline-inverted: hsl(0 0% 25%);
+    --background: hsl(0 0 98%);
 
-  --foreground: hsl(0 0% 5%);
-  --foreground-inverted: hsl(0 0% 97%);
+    --foreground: hsl(0 0% 5%);
+    --foreground-secondary: hsl(0 0% 40%);
 
-  --foreground-secondary: hsl(0 0% 40%);
-  --foreground-secondary-inverted: hsl(0 0% 60%);
+    --outline: hsl(0 0% 75%);
+  }
 }
 
 /* Inline CSS variables exposed to components */
@@ -24,16 +23,11 @@
   --color-dark: var(--dark);
 
   --color-background: var(--background);
-  --color-background-inverted: var(--color-dark);
 
   --color-outline: var(--outline);
-  --color-outline-inverted: var(--outline-inverted);
 
   --color-foreground: var(--foreground);
-  --color-foreground-inverted: var(--foreground-inverted);
-
   --color-foreground-secondary: var(--foreground-secondary);
-  --color-foreground-secondary-inverted: var(--foreground-secondary-inverted);
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -82,11 +76,9 @@
 /* Dark mode overrides */
 @layer theme {
   [data-theme="dark"] {
-    --dark: hsl(0 0% 90%);
-    --light: hsl(0 0% 2%);
     --background: hsl(0 0 0%);
 
-    --outline: hsl(0 0% 75%);
+    --outline: hsl(0 0% 25%);
 
     --foreground: hsl(0 0% 95%);
     --foreground-secondary: hsl(0 0% 60%);

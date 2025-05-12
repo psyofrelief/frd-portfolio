@@ -14,8 +14,8 @@ export default function FeaturedProjectsSection() {
         {/* Top-right project */}
         <ProjectItem {...featuredProjects[1]} />
 
-        <div className="col-span-2 flex flex-1  mx-auto gap-x-[100px] justify-between max-h-fit items-end w-full max-w-[820px]">
-          <ProjectItem {...featuredProjects[2]} className="w-full" />
+        <div className="col-span-2 flex flex-1  mx-auto gap-x-[100px] justify-between h-fit items-end w-full max-w-[820px]">
+          <ProjectItem {...featuredProjects[2]} className="" />
           <div className="flex justify-end w-fit">
             <Link href={"/works"} className="flex">
               <Button>All Works</Button>
@@ -48,7 +48,7 @@ const featuredProjects = [
     id: "gamma",
     name: "Project Gamma",
     shortDesc: "Visual Identity",
-    aspect: "4/3",
+    aspect: "16/9",
     className: "w-1/3 justify-self-start",
     img: "3.png",
   },

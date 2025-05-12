@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 declare global {
   interface Window {
@@ -16,6 +17,7 @@ export default function LiquidImageHover({
   intensity = 0.3,
   autoRatio = false,
   className = "",
+  aspect = "",
 }) {
   const pathname = usePathname();
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -79,7 +81,15 @@ export default function LiquidImageHover({
       <Script src="/hover-effect.umd.js" strategy="afterInteractive" />
 
       <div className="flex overflow-hidden w-full">
-        <div className={className} ref={wrapperRef} key={pathname} />
+        <div
+          ref={wrapperRef}
+          key={pathname}
+          className={cn(
+            "relative size-full bg-black", // fallback aspect
+            `aspect-${aspect}`,
+            className,
+          )}
+        />
       </div>
     </>
   );

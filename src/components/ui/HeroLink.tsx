@@ -1,11 +1,13 @@
+import { cn } from "@/lib/utils";
 import ArrowDiagonalRight from "../svg/ArrowDiagonalRightIcon";
 
 interface Props {
   label: string;
   href: string;
+  className?: string;
 }
 
-export default function HeroLink({ label, href }: Props) {
+export default function HeroLink({ label, href, className }: Props) {
   return (
     <li className="flex">
       <a
@@ -13,7 +15,10 @@ export default function HeroLink({ label, href }: Props) {
         rel="noreferrer"
         target="_blank"
         aria-label={`View my ${label}`}
-        className="flex-1 flex gap-x-xs font-mono uppercase text-foreground-secondary-inverted  text-xs items-center"
+        className={cn(
+          "flex-1 flex gap-x-xs font-mono uppercase text-foreground-secondary  text-xs items-center",
+          className,
+        )}
       >
         {label}
         <span>

@@ -12,6 +12,7 @@
 
     --foreground: hsl(0 0% 5%);
     --foreground-secondary: hsl(0 0% 40%);
+    --foreground-secondary-inverted: hsl(0 0% 60%);
 
     --outline: hsl(0 0% 75%);
   }
@@ -28,6 +29,7 @@
 
   --color-foreground: var(--foreground);
   --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-secondary-inverted: var(--foreground-secondary-inverted);
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

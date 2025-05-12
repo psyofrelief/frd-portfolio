@@ -43,12 +43,18 @@ export default function HeroSection() {
           <HeroLink
             label="LinkedIn"
             href="https://linkedin.com/in/faried-idris"
+            className="text-foreground-secondary-inverted"
           />
           <HeroLink
             label="Github"
             href="https://github.com/psyofrelief/frd-portfolio"
+            className="text-foreground-secondary-inverted"
           />
-          <HeroLink label="CV.pdf" href="/resume.pdf" />
+          <HeroLink
+            label="CV.pdf"
+            href="/resume.pdf"
+            className="text-foreground-secondary-inverted"
+          />
         </ul>
       </div>
     </section>

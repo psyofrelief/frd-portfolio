@@ -39,7 +39,7 @@ export default function SummarySection() {
   return (
     <section
       ref={sectionRef}
-      className="px-xs py-sm grid grid-cols-2 grid-rows-1 flex-col gap-y-xl gap-x-md pb-[400px]"
+      className="px-xs py-sm flex flex-col lg:grid grid-cols-2 grid-rows-1 flex-col gap-y-xl gap-x-md pb-[100px] md:pb-[400px]"
     >
       <div className="flex flex-col gap-y-xl">
         <header className="flex flex-col gap-y-xs">

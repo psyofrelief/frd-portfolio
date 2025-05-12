@@ -8,20 +8,23 @@ export default function FeaturedProjectsSection() {
     <section className="min-h-screen px-xs py-2xl flex flex-col gap-y-lg">
       <Heading>Featured Projects (03)</Heading>
 
-      <div className="grid grid-cols-2 grid-rows-2 gap-x-2xl gap-y-[300px]">
-        {/* Top-left project */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-x-2xl gap-y-xl sm:gap-y-[300px]">
+        {/* Top row (desktop) or first items (mobile) */}
         <ProjectItem {...featuredProjects[0]} />
-        {/* Top-right project */}
         <ProjectItem {...featuredProjects[1]} />
 
-        <div className="col-span-2 flex flex-1  mx-auto gap-x-[100px] justify-between h-fit items-end w-full max-w-[820px]">
-          <ProjectItem {...featuredProjects[2]} className="" />
-          <div className="flex justify-end w-fit">
-            <Link href={"/works"} className="flex">
-              <Button>All Works</Button>
-            </Link>
-          </div>
-        </div>
+        {/* Bottom center project (spans both columns on desktop) */}
+        <ProjectItem
+          {...featuredProjects[2]}
+          className="w-full max-w-[700px] col-span-1 sm:col-span-2 mx-auto"
+        />
+      </div>
+
+      {/* CTA */}
+      <div className=" mx-auto mb-[200px] sm:mb-[400px] sm:mt-0 mt-2xl flex justify-center sm:justify-end">
+        <Link href="/works">
+          <Button>All Works</Button>
+        </Link>
       </div>
     </section>
   );
@@ -29,27 +32,33 @@ export default function FeaturedProjectsSection() {
 
 const featuredProjects = [
   {
+    idx: 1,
     id: "alpha",
     name: "Project Alpha",
     shortDesc: "Soundscapes Portfolio",
     aspect: "4/3",
     className: "w-4/5",
     img: "1.png",
+    imgMobile: "3.png",
   },
   {
+    idx: 2,
     id: "beta",
     name: "Project Beta",
     shortDesc: "Craft + Culture",
     aspect: "2/3",
     className: "w-3/4 justify-self-end",
     img: "2.png",
+    imgMobile: "3.png",
   },
   {
+    idx: 3,
     id: "gamma",
     name: "Project Gamma",
     shortDesc: "Visual Identity",
     aspect: "16/9",
     className: "w-1/3 justify-self-start",
     img: "3.png",
+    imgMobile: "3.png",
   },
 ];

@@ -49,6 +49,7 @@
 
   --breakpoint-xs: 400px;
   --spacing-screen-minus-nav: calc(100vh - 32px);
+  --spacing-screen-minus-nav-mobile: calc(100vh - 80px);
 
   --font-sans: "Helvetica";
   --font-mono: var(--font-geist-mono);

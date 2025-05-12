@@ -4,11 +4,11 @@ import HeroLink from "@/components/ui/HeroLink";
 
 export default function ContactPage() {
   return (
-    <section className="px-xs py-xl min-h-screen-minus-nav items-center justify-center flex flex-col">
-      <div className="flex flex-col gap-y-xl">
+    <section className="px-xs py-xl min-h-screen-minus-nav-mobile sm:min-h-screen-minus-nav items-center justify-center flex flex-col">
+      <div className="flex flex-col gap-y-xl w-full max-w-[800px]">
         <div className="flex justify-between items-center">
-          <Heading>We're almost connected</Heading>
-          <ul className="flex gap-md items-center">
+          <Heading>We're almost connected.</Heading>
+          <ul className="flex gap-sm sm:gap-md items-center">
             <HeroLink
               label="LinkedIn"
               href="https://linkedin.com/in/faried-idris"
@@ -20,7 +20,7 @@ export default function ContactPage() {
           </ul>
         </div>
 
-        <ul className="flex flex-col min-w-[800px]">
+        <ul className="flex flex-col w-full">
           <ContactOption label="Email" href="mailto:6faried@gmail.com" />
           <ContactOption label="Phone" href="tel:+61433916911" />
         </ul>

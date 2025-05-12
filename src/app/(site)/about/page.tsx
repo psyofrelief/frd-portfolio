@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="px-xs py-2xl min-h-screen-minus-nav  flex flex-col gap-y-xl">
+    <section className="px-xs md:pt-3xl pt-lg md:pb-3xl pb-[300px] min-h-screen-minus-nav  flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
         <Heading>Info</Heading>
         <Brief>
@@ -17,9 +17,9 @@ export default function AboutPage() {
         </Brief>
       </header>
 
-      <div className="flex justify-between">
-        <div className="flex flex-col justify-between flex-1">
-          <div className="flex justify-between max-w-1/2">
+      <div className="flex md:flex-row flex-col-reverse gap-y-xl justify-between">
+        <div className="flex flex-col md:gap-y-0 gap-y-2xl justify-between flex-1">
+          <div className="flex justify-between md:max-w-1/2">
             <div className="flex flex-col gap-y-sm">
               <Heading>Skills</Heading>
               <ul className="flex flex-col gap-y-xs">
@@ -49,7 +49,7 @@ export default function AboutPage() {
           </div>
         </div>
         <Image
-          className="w-fit  max-w-[300px]"
+          className="w-full md:w-fit md:max-w-[300px] max-w-full"
           height={1440}
           width={960}
           src={`/images/2.png`}

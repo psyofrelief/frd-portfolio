@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useInView } from "framer-motion";
 
 declare global {
   interface Window {
@@ -18,19 +19,28 @@ export default function LiquidImageHover({
   autoRatio = false,
   className = "",
   aspect = "",
+}: {
+  src?: string;
+  displacement?: string;
+  intensity?: number;
+  autoRatio?: boolean;
+  className?: string;
+  aspect?: string;
 }) {
   const pathname = usePathname();
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(wrapperRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!isInView) return;
+    if (window.innerWidth < 768) return; // skip mobile
+
     const wrapper = wrapperRef.current;
-    if (!wrapper) return;
+    if (!wrapper || wrapper.dataset.active === "true") return;
 
     let effect: any;
-
-    // prevent multiple inits
-    if (wrapper.querySelector("canvas")) return;
+    wrapper.dataset.active = "true";
 
     const img = new Image();
     img.src = src;
@@ -49,24 +59,22 @@ export default function LiquidImageHover({
       if (typeof window.hoverEffect === "function") {
         effect = new window.hoverEffect({
           parent: wrapper,
-          intensity: intensity,
+          intensity,
           image1: src,
           image2: src,
           displacementImage: displacement,
           imagesRatio: img.naturalHeight / img.naturalWidth,
+          pixelRatio: 1,
         });
       }
     };
 
     return () => {
-      // remove hover effect and canvas to prevent WebGL context leaks
-      if (effect?.disp) {
-        effect.disp?.dispose?.();
-      }
-      const canvas = wrapper.querySelector("canvas");
-      if (canvas) canvas.remove();
+      wrapper.dataset.active = "false";
+      if (effect?.disp?.dispose) effect.disp.dispose();
+      wrapper.querySelector("canvas")?.remove();
     };
-  }, [src, displacement, intensity, pathname]);
+  }, [isInView, src, displacement, intensity, pathname, autoRatio]);
 
   return (
     <>
@@ -84,7 +92,7 @@ export default function LiquidImageHover({
         ref={wrapperRef}
         key={pathname}
         className={cn(
-          "relative size-full overflow-clip bg-black", // fallback aspect
+          "relative size-full overflow-clip bg-black",
           `aspect-${aspect}`,
           className,
         )}

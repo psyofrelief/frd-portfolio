@@ -19,7 +19,7 @@ export default function TypeText({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const chars = text.split("");
-  const MotionTag = motion(Tag);
+  const MotionTag = motion.create(Tag);
 
   return (
     <MotionTag

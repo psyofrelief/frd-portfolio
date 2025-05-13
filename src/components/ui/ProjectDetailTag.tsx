@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Heading from "./Heading";
 import Tag from "./Tag";
 

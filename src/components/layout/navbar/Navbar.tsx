@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import NavLink from "./NavLink";
 import Link from "next/link";
+import PerthClock from "@/components/ui/PerthClock";
 
 interface Props {
   className?: string;
@@ -14,7 +15,7 @@ export default function Navbar({ className }: Props) {
       )}
     >
       <Link href={"/"} className="uppercase font-mono">
-        Faried Idris — 12:48PM
+        Faried_Idris — <PerthClock /> | Perth, WA
       </Link>
       <p className="md:block hidden text-xs font-bold">
         Full stack web developer based in Australia

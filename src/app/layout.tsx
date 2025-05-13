@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/layout/footer/Footer";
 import { cookies } from "next/headers";
 import ThemeSync from "@/components/ThemeSync";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -23,6 +24,7 @@ export default async function RootLayout({
         className={`${geistMono.variable} antialiased relative min-h-screen flex flex-col bg-background text-foreground duration-0`}
       >
         <ThemeSync />
+        <CustomCursor />
 
         {children}
         <Footer />

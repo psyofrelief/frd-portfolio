@@ -55,7 +55,7 @@ export default function SingleWorkPage() {
             />
           </ul>
           <div className=" flex-col w-fit grid project_detail_tag  gap-x-sm gap-y-xs ">
-            <Heading>Tech Stack:</Heading>
+            <Heading label="Tech Stack:" />
             <ul className="grid gap-x-sm sm:flex flex-col gap-y-1 uppercase text-xs font-mono">
               <Tag>Javascript</Tag>
               <Tag>Javascript</Tag>

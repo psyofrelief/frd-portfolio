@@ -6,7 +6,7 @@ export default function WorksPage() {
   return (
     <section className="min-h-screen px-xs sm:pt-3xl pt-lg pb-3xl sm:pb-[250px] flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
-        <Heading>All Works (06)</Heading>
+        <Heading label="All Works (06)" />
         <Brief>
           A collection of digital projects built with clarity, intention, and
           craft.
@@ -17,7 +17,6 @@ export default function WorksPage() {
         <ProjectItem {...featuredProjects[0]} />
         <ProjectItem {...featuredProjects[1]} />
 
-        {/* Bottom row: project + "More Projects" button */}
         <ProjectItem
           {...featuredProjects[2]}
           className="w-full max-w-[700px] col-span-2 mx-auto"

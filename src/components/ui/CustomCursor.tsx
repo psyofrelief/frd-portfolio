@@ -1,15 +1,18 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
     const move = (e: MouseEvent) => {
+      if (!active) setActive(true); // first movement, reveal cursor
+
       const target = e.target as HTMLElement;
       const isPointer =
         getComputedStyle(target).cursor === "pointer" ||
@@ -20,12 +23,14 @@ export default function CustomCursor() {
 
     document.addEventListener("mousemove", move);
     return () => document.removeEventListener("mousemove", move);
-  }, []);
+  }, [active]);
 
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 z-[9999] pointer-events-none size-6 rounded-full mix-blend-difference bg-white translate-x-[-50%] translate-y-[-50%] will-change-transform transition-transform duration-100 ease-out"
+      className={`fixed sm:block hidden top-0 left-0 z-[9999] pointer-events-none size-6 rounded-full mix-blend-difference bg-white translate-x-[-50%] translate-y-[-50%] will-change-transform transition-transform duration-100 ease-out ${
+        active ? "opacity-100" : "opacity-0"
+      }`}
     />
   );
 }

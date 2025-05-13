@@ -43,7 +43,7 @@ export default function SummarySection() {
     >
       <div className="flex flex-col gap-y-xl">
         <header className="flex flex-col gap-y-xs">
-          <Heading>What I Do</Heading>
+          <Heading label="What I Do" />
           <Brief>Design, branding, prototyping and build</Brief>
         </header>
 

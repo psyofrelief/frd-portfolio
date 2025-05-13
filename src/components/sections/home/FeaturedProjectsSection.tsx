@@ -1,12 +1,13 @@
 import ProjectItem from "@/components/shared/logo/ProjectItem";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
+import TypeText from "@/components/ui/TypeText";
 import Link from "next/link";
 
 export default function FeaturedProjectsSection() {
   return (
     <section className="min-h-screen px-xs py-2xl flex flex-col gap-y-lg">
-      <Heading>Featured Projects (03)</Heading>
+      <Heading label="Featured Projects (03)" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-x-2xl gap-y-xl sm:gap-y-[300px]">
         {/* Top row (desktop) or first items (mobile) */}

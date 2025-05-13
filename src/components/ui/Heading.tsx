@@ -1,11 +1,14 @@
+import TypeText from "./TypeText";
+
 interface Props {
-  children: React.ReactNode;
+  label: string;
 }
 
-export default function Heading({ children }: Props) {
+export default function Heading({ label }: Props) {
   return (
-    <h1 className="uppercase font-mono text-xs w-fit text-foreground-secondary whitespace-nowrap">
-      {children}
-    </h1>
+    <TypeText
+      text={`${label}`}
+      className="uppercase font-mono text-xs w-fit text-foreground-secondary whitespace-nowrap"
+    />
   );
 }

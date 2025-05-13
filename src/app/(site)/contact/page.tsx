@@ -7,7 +7,7 @@ export default function ContactPage() {
     <section className="px-xs py-xl min-h-screen-minus-nav-mobile sm:min-h-screen-minus-nav items-center justify-center flex flex-col">
       <div className="flex flex-col gap-y-xl w-full max-w-[800px]">
         <div className="flex justify-between items-center">
-          <Heading>We're almost connected.</Heading>
+          <Heading label="We're almost connected." />
           <ul className="flex gap-sm sm:gap-md items-center">
             <HeroLink
               label="LinkedIn"

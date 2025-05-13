@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <section className="px-xs md:pt-3xl pb-md pt-lg mb-3xl md:min-h-screen-minus-nav  flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
-        <Heading>Info</Heading>
+        <Heading label="Info" />
         <Brief>
           Faried is a designer and art director focused on brand identity and
           design systems. He has experience working with clients including Nike,
@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:gap-y-0 gap-y-2xl justify-between flex-1">
           <div className="flex sm:flex-row flex-col gap-y-2xl justify-between lg:max-w-1/2">
             <div className="flex flex-col gap-sm">
-              <Heading>Skills</Heading>
+              <Heading label="Skills" />
               <ul className="flex flex-col gap-y-xs">
                 {skills.map((e) => (
                   <Tag key={Math.random()}>{e}</Tag>
@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col gap-y-sm">
-              <Heading>Services</Heading>
+              <Heading label="Services" />
               <ul className="flex flex-col gap-y-xs">
                 {services.map((e) => (
                   <Tag key={Math.random()}>{e}</Tag>
@@ -40,7 +40,7 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-y-sm w-fit">
-            <Heading>Colophon</Heading>
+            <Heading label="Colophon" />
             <ul className="flex flex-col gap-y-xs">
               {colophon.map((e) => (
                 <Tag key={Math.random()}>{e}</Tag>

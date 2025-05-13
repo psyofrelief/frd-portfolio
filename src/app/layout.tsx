@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer/Footer";
 import { cookies } from "next/headers";
 import ThemeSync from "@/components/ThemeSync";
 import CustomCursor from "@/components/ui/CustomCursor";
+import Navbar from "@/components/layout/navbar/Navbar";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,6 +26,7 @@ export default async function RootLayout({
       >
         <ThemeSync />
         <CustomCursor />
+        <Navbar />
 
         {children}
         <Footer />

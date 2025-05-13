@@ -34,7 +34,7 @@ export default function LiquidImageHover({
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!isInView) return;
-    if (window.innerWidth < 768) return; // skip mobile
+    if (window.innerWidth < 640) return; // skip mobile
 
     const wrapper = wrapperRef.current;
     if (!wrapper || wrapper.dataset.active === "true") return;

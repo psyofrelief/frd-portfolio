@@ -2,7 +2,7 @@ import Heading from "@/components/ui/Heading";
 
 export default function NextProjectSection() {
   return (
-    <section className="flex flex-col min-h-[400px] sm:min-h-[800px] justify-between items-center p-xs border-y border-y-outline">
+    <section className="flex flex-col min-h-[400px] sm:min-h-[800px] justify-between items-center p-xs border-t border-t-dark">
       <div className="flex justify-between items-center w-full">
         <Heading>Works</Heading>
         <button className="font-mono text-xs uppercase">Back to top</button>

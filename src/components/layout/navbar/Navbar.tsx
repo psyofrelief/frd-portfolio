@@ -10,7 +10,7 @@ export default function Navbar({ className }: Props) {
   return (
     <nav
       className={cn(
-        "z-[99] mix-blend-difference flex py-xs text-xs justify-between text-light",
+        "z-[99] mix-blend-difference flex text-xs justify-between text-light fixed top-0 left-0 right-0 w-full p-xs",
         className,
       )}
     >

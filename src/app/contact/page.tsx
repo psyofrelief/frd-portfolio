@@ -4,7 +4,7 @@ import HeroLink from "@/components/ui/HeroLink";
 
 export default function ContactPage() {
   return (
-    <section className="px-xs py-xl min-h-screen-minus-nav-mobile sm:min-h-screen-minus-nav items-center justify-center flex flex-col">
+    <section className="px-xs py-xl min-h-screen-minus-nav-mobile sm:min-h-screen items-center justify-center flex flex-col">
       <div className="flex flex-col gap-y-xl w-full max-w-[800px]">
         <div className="flex justify-between items-center">
           <Heading label="We're almost connected." />

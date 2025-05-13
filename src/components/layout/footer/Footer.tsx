@@ -7,7 +7,7 @@ import LogoVertical from "@/components/shared/logo/LogoVertical";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col   mix-blend-difference text-light p-xs sm:min-h-screen-minus-nav justify-between">
+    <footer className="flex flex-col   mix-blend-difference border-t border-t-outline text-light p-xs sm:min-h-screen-minus-nav justify-between">
       <div className="flex flex-1 lg:flex-row flex-col sm:justify-start lg:justify-between gap-x-lg lg:gap-y-0 sm:gap-y-md gap-y-xl">
         <p className="uppercase font-mono text-xs lg:max-w-[490px]">
           now that you got here, why not getting in touch? look around, there

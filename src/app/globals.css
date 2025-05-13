@@ -46,6 +46,8 @@
   --spacing-xl: 48px;
   --spacing-2xl: 64px;
   --spacing-3xl: 80px;
+  --spacing-nav: 32px;
+  --spacing-nav-mobile: 80px;
 
   --breakpoint-xs: 400px;
   --spacing-screen-minus-nav: calc(100vh - 32px);

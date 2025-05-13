@@ -23,7 +23,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex flex-col p-xs mix-blend-difference">
+    <section className="relative h-screen w-full flex flex-col p-xs mix-blend-difference pt-nav">
       <Link href={"/"} className="hidden mb-md relative md:flex">
         <LiquidImageHover />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
@@ -33,14 +33,7 @@ export default function HeroSection() {
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
 
-      {/* Sentinel to detect when nav should stick */}
       <div ref={refSentinel} className="w-full h-px" />
-
-      <Navbar
-        className={cn(
-          isFixed && "fixed mt-0 top-0 right-0 left-0 min-w-full px-xs",
-        )}
-      />
 
       <div className="absolute bottom-0 inset-x-0 p-xs flex justify-between items-center">
         <ScrollToSectionButton />

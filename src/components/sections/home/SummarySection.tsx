@@ -66,7 +66,7 @@ export default function SummarySection() {
             </Link>
           </li>
           <li className="flex size-fit">
-            <Link href={"/contact"} className="flex">
+            <Link href={"/contact"} className="flex flex-1">
               <Button>
                 Get in touch
                 <ArrowRightIcon />

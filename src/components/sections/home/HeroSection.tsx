@@ -7,6 +7,7 @@ import HeroLink from "@/components/ui/HeroLink";
 import { cn } from "@/lib/utils";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   const refSentinel = useRef<HTMLDivElement>(null);
@@ -23,8 +24,12 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-full flex flex-col p-xs mix-blend-difference">
-      <Link href={"/"} className="flex mb-md relative">
+      <Link href={"/"} className="hidden mb-md relative md:flex">
         <LiquidImageHover />
+        <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
+      </Link>
+      <Link href={"/"} className="flex mb-md relative md:hidden">
+        <Image src={"/images/FRD.svg"} height={1920} width={1080} alt="s" />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
 

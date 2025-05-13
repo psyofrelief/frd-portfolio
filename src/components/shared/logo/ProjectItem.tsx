@@ -1,4 +1,5 @@
 "use client";
+import FadeIn from "@/components/ui/FadeIn";
 import FadeUp from "@/components/ui/FadeUp";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import { cn } from "@/lib/utils";
@@ -68,17 +69,22 @@ export default function ProjectItem({
           </Link>
         </div>
       </FadeUp>
-      <FadeUp
-        as={"li"}
-        className={cn("flex flex-col w-full relative sm:hidden")}
-      >
-        <Image src={`/images/${imgMobile}`} width={1000} height={720} alt="s" />
-
-        <div className="flex justify-between items-baseline">
-          <p className="mt-2 text-xs uppercase font-mono">{`00${idx}_${name}`}</p>
-          <p className="mt-2 text-xs uppercase font-mono">{shortDesc}</p>
-        </div>
-      </FadeUp>
+      {isMobile && (
+        <FadeUp as="div" className="flex flex-col w-full relative sm:hidden">
+          <Link href={`/works/${id}`}>
+            <Image
+              src={`/images/${imgMobile}`}
+              width={1000}
+              height={720}
+              alt="s"
+            />
+          </Link>
+          <div className="flex justify-between items-baseline">
+            <p className="mt-2 text-xs uppercase font-mono">{`00${idx}_${name}`}</p>
+            <p className="mt-2 text-xs uppercase font-mono">{shortDesc}</p>
+          </div>
+        </FadeUp>
+      )}
     </>
   );
 }

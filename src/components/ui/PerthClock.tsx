@@ -21,5 +21,5 @@ export default function PerthClock() {
     return () => clearInterval(interval);
   }, []);
 
-  return <span>{time || "12:45 pm"}</span>;
+  return <span>{time || "xx:xx xx"}</span>;
 }

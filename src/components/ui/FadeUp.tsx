@@ -15,15 +15,17 @@ export default function FadeUp({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
+  const MotionTag = motion(Tag); // animate the actual element
+
   return (
-    <motion.div
+    <MotionTag
       ref={ref}
       initial={{ opacity: 0, y: 18 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={className}
     >
-      <Tag>{children}</Tag>
-    </motion.div>
+      {children}
+    </MotionTag>
   );
 }

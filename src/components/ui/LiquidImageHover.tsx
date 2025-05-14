@@ -14,8 +14,8 @@ declare global {
 
 export default function LiquidImageHover({
   src = "/images/FRD.svg",
-  displacement = "/images/displacement4.png",
-  intensity = 0.3,
+  displacement = "/images/displacement.png",
+  intensity = 0.1,
   autoRatio = false,
   className = "",
   aspect = "",

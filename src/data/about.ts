@@ -24,6 +24,6 @@ export const services = [
 export const colophon = [
   "Typography Helvetica / Geist Mono",
   "Powered by Vercel / NextJs",
-  "Hacked by me + Google Search",
+  "Crafted solo with lots of tabs open",
   "Made in Australia",
 ];

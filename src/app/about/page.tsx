@@ -11,10 +11,11 @@ export default function AboutPage() {
       <header className="flex flex-col gap-y-sm">
         <Heading label="Info" />
         <Brief>
-          Faried is a designer and art director focused on brand identity and
-          design systems. He has experience working with clients including Nike,
-          Netflix, Google, Electronic Arts and Samsung, at design studios based
-          in New York, San Francisco and Stockholm.
+          Faried has a keen eye for simple, gorgeous & dynamic user interfaces.
+          He specialises in using modern frameworks to create online apps that
+          are accessible and performant. He brings a meticulous approach to both
+          programming and user experience, having worked in branding & visual
+          design.
         </Brief>
       </header>
 

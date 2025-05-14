@@ -45,7 +45,7 @@ export default function SummarySection() {
       <div className="flex flex-col gap-y-xl">
         <header className="flex flex-col gap-y-xs">
           <Heading label="What I Do" />
-          <Brief>Design, branding, prototyping and build</Brief>
+          <Brief>Development, branding, and build</Brief>
         </header>
 
         <div className="md:flex hidden flex-1">
@@ -69,9 +69,11 @@ export default function SummarySection() {
 
       <div className="flex flex-col gap-y-md max-w-fit mx-auto mt-auto">
         <p className="uppercase font-mono max-w-[650px]">
-          Enthusiastic about graphic design, typography, and the dynamic areas
-          of motion and web-based animations. Specialised in translating brands
-          into unique and immersive digital user experiences.
+          Enthusiastic full stack developer with a keen sense of motion, design,
+          and interactive web content. I like creating user-friendly, fast
+          interfaces and converting intricate concepts into clear, useful code.
+          I'm devoted to creating gorgeous digital works that skilfully combine
+          development & design.
         </p>
         <ul className="flex flex-col gap-y-sm">
           <li className="flex">

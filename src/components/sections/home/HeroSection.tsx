@@ -23,13 +23,20 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex flex-col p-xs mix-blend-difference pt-nav">
+    <section className="relative h-screen  w-full flex flex-col p-xs mix-blend-difference pt-[100px] sm:pt-nav">
       <Link href={"/"} className="hidden mb-md relative md:flex">
         <LiquidImageHover />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
       <Link href={"/"} className="flex mb-md relative md:hidden">
-        <Image src={"/images/FRD.svg"} height={1920} width={1080} alt="s" />
+        <Image
+          priority
+          loading="eager"
+          src={"/images/FRD.svg"}
+          height={1920}
+          width={1080}
+          alt="s"
+        />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
 

@@ -1,12 +1,13 @@
 import Brief from "@/components/ui/Brief";
 import Heading from "@/components/ui/Heading";
+import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Tag from "@/components/ui/Tag";
 import { skills, services, colophon } from "@/data/about";
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="px-xs md:pt-3xl pb-md pt-lg mb-3xl md:min-h-screen-minus-nav  flex flex-col gap-y-xl">
+    <section className="px-xs md:pt-3xl pb-md pt-lg mb-3xl mt-nav-mobile sm:mt-nav md:min-h-screen-minus-nav  flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
         <Heading label="Info" />
         <Brief>
@@ -48,13 +49,25 @@ export default function AboutPage() {
             </ul>
           </div>
         </div>
-        <Image
-          className=" w-full md:max-w-[370px]"
-          height={1440}
-          width={960}
-          src={`/images/2.png`}
-          alt={`display demo image `}
-        />
+        <div className="md:flex hidden flex-1 max-w-[400px]">
+          <LiquidImageHover
+            src="/images/about.webp"
+            aspect="3/4"
+            autoRatio
+            className="max-w-[300px] h-auto flex-1"
+          />
+        </div>
+        <div className="flex md:hidden flex-1 ">
+          <Image
+            src="/images/about.webp"
+            alt="Image of myself"
+            height={3413}
+            width={2560}
+            priority
+            loading="eager"
+            className=" h-auto flex-1"
+          />
+        </div>
       </div>
     </section>
   );

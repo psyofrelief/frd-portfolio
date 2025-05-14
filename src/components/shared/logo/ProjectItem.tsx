@@ -1,5 +1,4 @@
 "use client";
-import FadeIn from "@/components/ui/FadeIn";
 import FadeUp from "@/components/ui/FadeUp";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import { cn } from "@/lib/utils";
@@ -14,8 +13,8 @@ interface Props {
   shortDesc: string;
   className?: string;
   aspect: string;
-  img: string;
-  imgMobile: string;
+  coverImg: string;
+  coverImgMobile: string;
 }
 
 export default function ProjectItem({
@@ -25,8 +24,8 @@ export default function ProjectItem({
   aspect,
   id,
   idx,
-  img,
-  imgMobile,
+  coverImg,
+  coverImgMobile,
 }: Props) {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -47,13 +46,13 @@ export default function ProjectItem({
           className={cn(" w-full relative bg-gray-300", `aspect-[${aspect}]`)}
         >
           <LiquidImageHover
-            src={`/images/${img}`}
+            src={coverImg}
             autoRatio
             aspect={aspect}
             className="absolute inset-0"
           />
 
-          <Image src={`/images/${img}`} width={1000} height={720} alt="s" />
+          <Image src={coverImg} width={1000} height={720} alt="s" />
         </div>
 
         <div className="flex justify-between items-baseline">
@@ -73,7 +72,9 @@ export default function ProjectItem({
         <FadeUp as="div" className="flex flex-col w-full relative sm:hidden">
           <Link href={`/works/${id}`}>
             <Image
-              src={`/images/${imgMobile}`}
+              loading={idx === 1 || idx === 2 ? "eager" : "lazy"}
+              priority={idx === 1 || idx === 2}
+              src={coverImgMobile}
               width={1000}
               height={720}
               alt="s"

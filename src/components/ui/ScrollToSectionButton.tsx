@@ -15,9 +15,10 @@ export default function ScrollToSectionButton() {
 
       <button
         type="button"
-        className="font-mono sm:hidden block whitespace-nowrap text-xs text-light"
+        className="font-mono sm:hidden flex whitespace-nowrap text-xs text-light"
+        onClick={() => scrollTo("featured-projects")}
       >
-        [SCROLL]
+        [<FlipText>SCROLL</FlipText>]
       </button>
     </>
   );

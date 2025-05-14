@@ -3,7 +3,7 @@ import Tag from "./Tag";
 
 interface Props {
   label: string;
-  desc: string;
+  desc: string | null;
   anchor?: boolean;
 }
 
@@ -16,11 +16,9 @@ export default function ProjectDetailTag({
     <div className="project_detail_tag grid gap-x-sm items-center">
       <Heading label={`${label}:`} />
       <Tag className="flex whitespace-nowrap">
-        {!anchor ? (
-          desc
-        ) : (
+        {anchor && desc ? (
           <a
-            href={label}
+            href={desc}
             rel="noreferrer"
             target="_blank"
             aria-label={`Visit ${label}`}
@@ -28,6 +26,10 @@ export default function ProjectDetailTag({
           >
             {desc}
           </a>
+        ) : (
+          desc || (
+            <span className="line-through text-foreground-secondary">null</span>
+          )
         )}
       </Tag>
     </div>

@@ -5,6 +5,7 @@ import Brief from "@/components/ui/Brief";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -47,7 +48,23 @@ export default function SummarySection() {
           <Brief>Design, branding, prototyping and build</Brief>
         </header>
 
-        <LiquidImageHover src="/images/3.png" className="max-w-full" />
+        <div className="md:flex hidden flex-1">
+          <LiquidImageHover
+            src="/images/summary.webp"
+            aspect="3/4"
+            autoRatio
+            className="max-w-[300px] h-auto flex-1"
+          />
+        </div>
+        <div className="flex md:hidden flex-1 ">
+          <Image
+            src="/images/summary.webp"
+            alt="Image of myself"
+            height={3413}
+            width={2560}
+            className=" h-auto flex-1"
+          />
+        </div>
       </div>
 
       <div className="flex flex-col gap-y-md max-w-fit mx-auto mt-auto">
@@ -56,7 +73,7 @@ export default function SummarySection() {
           of motion and web-based animations. Specialised in translating brands
           into unique and immersive digital user experiences.
         </p>
-        <ul className="flex flex-col gap-y-xs">
+        <ul className="flex flex-col gap-y-sm">
           <li className="flex">
             <Link
               href={"/about"}

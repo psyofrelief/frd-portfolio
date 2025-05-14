@@ -1,27 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Navbar from "@/components/layout/navbar/Navbar";
 import ScrollToSectionButton from "@/components/ui/ScrollToSectionButton";
 import HeroLink from "@/components/ui/HeroLink";
-import { cn } from "@/lib/utils";
 import LiquidImageHover from "@/components/ui/LiquidImageHover";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function HeroSection() {
-  const refSentinel = useRef<HTMLDivElement>(null);
-  const [isFixed, setIsFixed] = useState(false);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([e]) => setIsFixed(e.intersectionRatio === 0),
-      { threshold: 0 },
-    );
-    if (refSentinel.current) obs.observe(refSentinel.current);
-    return () => obs.disconnect();
-  }, []);
-
   return (
     <section className="relative h-screen  w-full flex flex-col p-xs mix-blend-difference pt-[100px] sm:pt-nav">
       <Link href={"/"} className="hidden mb-md relative md:flex">
@@ -39,8 +24,6 @@ export default function HeroSection() {
         />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
-
-      <div ref={refSentinel} className="w-full h-px" />
 
       <div className="absolute bottom-0 inset-x-0 p-xs flex justify-between items-center">
         <ScrollToSectionButton />

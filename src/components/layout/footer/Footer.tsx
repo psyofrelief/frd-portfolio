@@ -10,10 +10,10 @@ export default function Footer() {
     <footer className="flex flex-col   mix-blend-difference border-t border-t-outline text-light px-xs pb-xs pt-sm sm:min-h-screen-minus-nav justify-between">
       <div className="flex flex-1 lg:flex-row flex-col sm:justify-start lg:justify-between gap-x-lg lg:gap-y-0 sm:gap-y-md gap-y-xl">
         <p className="uppercase font-mono text-xs lg:max-w-[490px]">
-          Why don't you contact us now that you're here? Look around; you'll
-          find my email address and social media accounts. If you'd want to work
-          together or have a great idea, please send me a note; I'd be delighted
-          to hear it!
+          Why don&apos;t you contact us now that you&apos;re here? Look around;
+          you&apos;ll find my email address and social media accounts. If you
+          want to work together or have a great idea, please send me a note;
+          I&apos;d be delighted to hear it!
         </p>
 
         <div className="md:flex justify-between lg:justify-start  hidden sm:grid grid-cols-2 grid-rows-2 gap-y-xs gap-x-lg lg:gap-x-2xl">

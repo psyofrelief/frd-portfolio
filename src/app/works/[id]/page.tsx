@@ -7,8 +7,11 @@ import { projectItems } from "@/data/projects";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default function SingleWorkPage({ params }: { params: { id: string } }) {
-  const project = projectItems.find((p) => p.id === params.id);
+type Params = Promise<{ id: string }>;
+
+export default async function SingleWorkPage({ params }: { params: Params }) {
+  const { id } = await params;
+  const project = projectItems.find((p) => p.id === id);
   if (!project) return notFound();
 
   return (

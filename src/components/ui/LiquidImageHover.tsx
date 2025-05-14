@@ -6,12 +6,25 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useInView } from "framer-motion";
 
+type HoverEffectInstance = {
+  disp?: { dispose?: () => void };
+};
+
+type HoverEffectConstructor = new (options: {
+  parent: HTMLElement;
+  intensity: number;
+  image1: string;
+  image2: string;
+  displacementImage: string;
+  imagesRatio: number;
+  pixelRatio?: number;
+}) => HoverEffectInstance;
+
 declare global {
   interface Window {
-    hoverEffect: any;
+    hoverEffect: HoverEffectConstructor;
   }
 }
-
 export default function LiquidImageHover({
   src = "/images/FRD.svg",
   displacement = "/images/displacement.png",
@@ -39,7 +52,7 @@ export default function LiquidImageHover({
     const wrapper = wrapperRef.current;
     if (!wrapper || wrapper.dataset.active === "true") return;
 
-    let effect: any;
+    let effect: { disp?: { dispose?: () => void } } | null = null;
     wrapper.dataset.active = "true";
 
     const img = new Image();

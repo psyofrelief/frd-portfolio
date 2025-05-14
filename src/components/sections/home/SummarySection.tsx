@@ -72,8 +72,8 @@ export default function SummarySection() {
           Enthusiastic full stack developer with a keen sense of motion, design,
           and interactive web content. I like creating user-friendly, fast
           interfaces and converting intricate concepts into clear, useful code.
-          I'm devoted to creating gorgeous digital works that skilfully combine
-          development & design.
+          I&apos;m devoted to creating gorgeous digital works that skilfully
+          combine development & design.
         </p>
         <ul className="flex flex-col gap-y-sm">
           <li className="flex">

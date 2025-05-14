@@ -29,7 +29,7 @@ export default function SingleWorkPage({ params }: { params: { id: string } }) {
                 src={project.coverImgMobile}
                 alt={project.name}
               />
-              <div className="grid sm:grid-cols-2 gap-x-lg gap-y-sm text-xs">
+              <div className="grid sm:grid-cols-2 gap-x-lg gap-y-sm sm:text-sm text-xs">
                 <p>{project.paragraph1}</p>
                 <p>{project.paragraph2}</p>
               </div>

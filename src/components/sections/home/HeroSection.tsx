@@ -9,7 +9,11 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative h-screen  w-full flex flex-col p-xs mix-blend-difference pt-[100px] sm:pt-nav">
-      <Link href={"/"} className="hidden mb-md relative md:flex">
+      <Link
+        aria-label="Visit home page"
+        href={"/"}
+        className="hidden mb-md relative md:flex"
+      >
         <LiquidImageHover />
         <div className="absolute bottom-0 right-0 left-0 w-full z-[99] h-[1px] bg-background-inverted" />
       </Link>
@@ -31,17 +35,17 @@ export default function HeroSection() {
           <HeroLink
             label="LinkedIn"
             href="https://linkedin.com/in/faried-idris"
-            className="text-foreground-secondary-inverted"
+            className="text-foreground-secondary"
           />
           <HeroLink
             label="Github"
             href="https://github.com/psyofrelief/frd-portfolio"
-            className="text-foreground-secondary-inverted"
+            className="text-foreground-secondary"
           />
           <HeroLink
             label="CV.pdf"
             href="/resume.pdf"
-            className="text-foreground-secondary-inverted"
+            className="text-foreground-secondary"
           />
         </ul>
       </div>

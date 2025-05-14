@@ -13,9 +13,9 @@ export default function ProjectDetailTag({
   anchor = false,
 }: Props) {
   return (
-    <div className="project_detail_tag grid gap-x-sm items-center">
+    <li className="project_detail_tag grid gap-x-sm items-center">
       <Heading label={`${label}:`} />
-      <Tag className="flex whitespace-nowrap">
+      <div className="flex whitespace-nowrap text-xs uppercase font-mono text-current leading-none">
         {anchor && desc ? (
           <a
             href={desc}
@@ -31,7 +31,7 @@ export default function ProjectDetailTag({
             <span className="line-through text-foreground-secondary">null</span>
           )
         )}
-      </Tag>
-    </div>
+      </div>
+    </li>
   );
 }

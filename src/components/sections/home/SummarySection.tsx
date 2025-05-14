@@ -79,9 +79,10 @@ export default function SummarySection() {
           <li className="flex">
             <Link
               href={"/about"}
+              aria-label="Visit about page"
               className="font-mono text-xs uppercase text-foreground-secondary"
             >
-              Learn more
+              Learn about me
             </Link>
           </li>
           <li className="flex size-fit">

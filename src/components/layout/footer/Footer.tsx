@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="flex w-fit font-bold text-xs">© 2003 - 2025</p>
           </div>
           {footerData.map((e) => (
-            <div key={Math.random()} className="flex flex-col">
+            <ul key={Math.random()} className="flex flex-col gap-y-xs">
               {e.links.map((link) => (
                 <FooterLink
                   key={link.label}
@@ -30,14 +30,14 @@ export default function Footer() {
                   label={link.label}
                 />
               ))}
-            </div>
+            </ul>
           ))}
         </div>
 
         <div className="sm:hidden grid grid-cols-2 justify-between flex-1">
           <div className="w-fit flex flex-col gap-y-md">
             {footerData.map((e) => (
-              <div key={Math.random()} className="flex flex-col">
+              <ul key={Math.random()} className="flex flex-col">
                 {e.links.map((link) => (
                   <FooterLink
                     key={link.label}
@@ -45,7 +45,7 @@ export default function Footer() {
                     label={link.label}
                   />
                 ))}
-              </div>
+              </ul>
             ))}
             <div className="flex flex-col whitespace-nowrap mt-auto pt-xl">
               <p className="flex w-fit font-bold text-xs">Faried Idris</p>
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <Link href={"/"} className="sm:flex hidden">
+      <Link aria-label="Visit home page" href={"/"} className="sm:flex hidden">
         <LiquidImageHover />
       </Link>
     </footer>

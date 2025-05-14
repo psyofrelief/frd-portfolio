@@ -14,7 +14,7 @@ export default function WorksPage() {
         </Brief>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-x-2xl gap-y-xl sm:gap-y-[300px]">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-x-2xl gap-y-xl sm:gap-y-[300px]">
         <ProjectItem {...projectItems[0]} />
         <ProjectItem {...projectItems[1]} />
 
@@ -26,12 +26,12 @@ export default function WorksPage() {
         <ProjectItem {...projectItems[3]} className="sm:hidden" />
 
         <ProjectItem {...projectItems[4]} className="sm:hidden" />
-      </div>
-      <div className="sm:flex md:flex-row flex-col gap-y-[200px] lg:mt-0 mt-[300px] hidden justify-between  w-full col-span-2 gap-lg">
+      </ul>
+      <ul className="sm:flex md:flex-row flex-col gap-y-[200px] lg:mt-0 mt-[300px] hidden justify-between  w-full col-span-2 gap-lg">
         <ProjectItem {...projectItems[3]} />
 
         <ProjectItem {...projectItems[4]} className="max-w-[420px]" />
-      </div>
+      </ul>
     </section>
   );
 }

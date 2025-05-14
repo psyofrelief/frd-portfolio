@@ -18,8 +18,8 @@ export default function NextProjectSection({
   return (
     <section className="flex flex-col min-h-[400px] sm:min-h-[800px] justify-between items-center p-xs border-t border-t-dark">
       <div className="flex justify-between items-center w-full">
-        <Link href={nextProject.id}>
-          <Heading label="Works" />
+        <Link aria-label="See all works" href={nextProject.id}>
+          <Heading label="See All Works" />
         </Link>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import ThemeSync from "@/components/ThemeSync";
 import CustomCursor from "@/components/ui/CustomCursor";
 import Navbar from "@/components/layout/navbar/Navbar";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -80,6 +81,7 @@ export default async function RootLayout({
       >
         <ThemeSync />
         <CustomCursor />
+        <CookieBanner />
         <Navbar />
         {children}
         <Footer />

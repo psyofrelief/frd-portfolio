@@ -5,7 +5,7 @@ import { projectItems } from "@/data/projects";
 
 export default function WorksPage() {
   return (
-    <section className="min-h-screen px-xs sm:pt-3xl pt-lg pb-3xl sm:pb-[250px] flex flex-col gap-y-xl">
+    <section className="min-h-screen px-xs mt-nav-mobile sm:mt-nav sm:pt-3xl pt-lg pb-3xl sm:pb-[250px] flex flex-col gap-y-xl">
       <header className="flex flex-col gap-y-sm">
         <Heading label="All Works (05)" />
         <Brief>

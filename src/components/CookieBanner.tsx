@@ -35,13 +35,10 @@ export default function CookieBanner() {
   return (
     <div
       id="cookie_consent_banner"
-      className="fixed shadow-xl bottom-0 left-0 w-full xs:max-w-fit h-full max-h-fit  z-50 bg-background border border-outline flex flex-col gap-y-md p-sm"
+      className="fixed shadow-xl bottom-0 left-0 w-full xs:max-w-fit items-center max-h-fit  z-50 bg-background border border-outline flex gap-x-sm p-sm"
     >
-      <p className="max-w-[300px] text-2xs">
-        We use optional cookies to enhance your browsing experience and
-        understand how our site is used.
-      </p>
-      <div className="flex gap-sm">
+      <p className="max-w-[300px] text-2xs">This site uses cookies.</p>
+      <div className="flex gap-xs">
         <Button
           className="w-full !text-2xs py-1 px-xs"
           onClick={() => handleConsent(true)}
